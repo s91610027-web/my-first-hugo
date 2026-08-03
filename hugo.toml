@@ -2,45 +2,33 @@ baseURL = 'https://example.org/'
 locale = 'zh-tw'
 defaultContentLanguage = 'zh-tw'
 title = '我的個人部落格'
-theme = 'PaperMod'
+theme = 'hugo-theme-stack'
 
-# 啟用站內搜尋功能與 JSON 輸出
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  env = "production"
-  title = "我的個人部落格"
+  mainSections = ["posts", "post"]
   description = "記錄技術筆記、學習心得與生活隨筆"
-  keywords = ["Blog", "Tech", "Hugo", "PaperMod"]
-  author = "Blog Author"
-  
-  # 主題模式設定：'auto', 'dark', 'light'
-  defaultTheme = "auto"
-  disableThemeToggle = false
-  
-  # 文章排版與功能增強
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowToc = true
-  TocOpen = false
+  keywords = ["Blog", "Tech", "Hugo", "Stack"]
 
-  # 首頁歡迎卡片 (Home Info Page)
-  [params.homeInfoParams]
-    Title = "歡迎來到我的部落格 👋"
-    Content = "這裡是我記錄軟體開發、技術學習與個人思緒的地方。歡迎閱讀與交流！"
+  [params.sidebar]
+    compact = false
+    title = "我的個人部落格"
+    subtitle = "記錄軟體開發與生活思緒的地方 👋"
 
-  # 社群連結圖示 (可依需求自訂)
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com"
+  [params.article]
+    toc = true
+    readingTime = true
+    headingAnchor = true
 
-  [[params.socialIcons]]
-    name = "email"
-    url = "mailto:example@email.com"
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+  [params.footer]
+    since = 2026
+    customText = "Powered by Hugo & Hugo Theme Stack"
 
 # 主選單導覽
 [[menu.main]]
@@ -62,13 +50,7 @@ theme = 'PaperMod'
   weight = 30
 
 [[menu.main]]
-  identifier = "search"
-  name = "🔍 搜尋"
-  url = "/search/"
-  weight = 40
-
-[[menu.main]]
   identifier = "about"
   name = "關於我"
   url = "/about/"
-  weight = 50
+  weight = 40
