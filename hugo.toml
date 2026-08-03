@@ -1,0 +1,74 @@
+baseURL = 'https://example.org/'
+locale = 'zh-tw'
+defaultContentLanguage = 'zh-tw'
+title = '我的個人部落格'
+theme = 'PaperMod'
+
+# 啟用站內搜尋功能與 JSON 輸出
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  env = "production"
+  title = "我的個人部落格"
+  description = "記錄技術筆記、學習心得與生活隨筆"
+  keywords = ["Blog", "Tech", "Hugo", "PaperMod"]
+  author = "Blog Author"
+  
+  # 主題模式設定：'auto', 'dark', 'light'
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  
+  # 文章排版與功能增強
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+
+  # 首頁歡迎卡片 (Home Info Page)
+  [params.homeInfoParams]
+    Title = "歡迎來到我的部落格 👋"
+    Content = "這裡是我記錄軟體開發、技術學習與個人思緒的地方。歡迎閱讀與交流！"
+
+  # 社群連結圖示 (可依需求自訂)
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:example@email.com"
+
+# 主選單導覽
+[[menu.main]]
+  identifier = "posts"
+  name = "文章彙整"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "categories"
+  name = "分類"
+  url = "/categories/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "標籤"
+  url = "/tags/"
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "🔍 搜尋"
+  url = "/search/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "about"
+  name = "關於我"
+  url = "/about/"
+  weight = 50
