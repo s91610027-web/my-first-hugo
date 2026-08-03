@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://s91610027-web.github.io/my-first-hugo/'
 locale = 'zh-tw'
 defaultContentLanguage = 'zh-tw'
 title = '我的個人部落格'
